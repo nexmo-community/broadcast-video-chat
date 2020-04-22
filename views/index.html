@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Broadcast Video Chat</title>
+    <meta
+      name="description"
+      content="Broadcast your video chat to a large audience with Vonage Video API in Node.js"
+    />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://tokbox.com/developer/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Broadcast your video chat</h1>
+    </header>
+
+    <main>
+      <div id="subscriber" class="subscriber"></div>
+      <div id="publisher" class="publisher"></div>
+
+      <div class="broadcast">
+        <a class="hidden" id="hlsLink" target="_blank" rel="noopener noreferrer"
+          >Open Broadcast page</a
+        >
+        <p class="invisible" id="hlsCopyTarget"></p>
+        <button class="hidden" id="copyLink">Copy HLS link</button>
+        <button id="startBroadcast">Start Broadcast</button>
+        <button id="stopBroadcast" class="hidden">Stop Broadcast</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <small
+          >Built on <a href="https://glitch.com">Glitch</a> with the
+          <a href="https://tokbox.com/developer/">Vonage Video API</a>.</small
+        >
+      </p>
+    </footer>
+
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

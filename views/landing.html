@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Broadcast Video Chat</title>
+    <meta
+      name="description"
+      content="Broadcast your video chat to a large audience with Vonage Video API in Node.js"
+    />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://tokbox.com/developer/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Broadcast your video chat</h1>
+    </header>
+
+    <main>
+      <form id="registration" class="registration">
+        <label>
+          <span>Room</span>
+          <input
+            type="text"
+            name="room-name"
+            placeholder="Enter room name"
+            required
+          />
+        </label>
+        <button>Enter</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        <small
+          >Built on <a href="https://glitch.com">Glitch</a> with the
+          <a href="https://tokbox.com/developer/">Vonage Video API</a>.</small
+        >
+      </p>
+    </footer>
+
+    <script>
+      const form = document.getElementById("registration");
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        location.pathname = `/session/${form.elements["room-name"].value}`;
+      });
+    </script>
+  </body>
+</html>
